@@ -1,32 +1,18 @@
 //Imprimir la tabla del 5 en la consola
 
-const fs= require("fs");
 
+
+const {crearArchivo}= require("./helpers/multiplicar");
 const base=3;
 console.clear();
 
-console.log("-----------------------------");
-console.log(`        TABLA DEL ${base}           `);
-console.log("-----------------------------");
+crearArchivo(base)
+
+.then(nombreArchivo => console.log(nombreArchivo,"creado"))
+.catch(error=> console.log(error))
 
 
 
 
 
-let salida="";
 
-
-for (let index = 1; index < 11; index++) {
-    const element = index*base;
-    salida += `${base} x ${index} = ${element}\n`;
-    
-}
-
-console.log(salida);
-
-fs.writeFile(`tablal-${base}.txt`, salida, (err)=>{
-
-    if (err) throw err;
-
-    console.log("Archivo creado");
-})
