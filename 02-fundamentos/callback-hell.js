@@ -31,7 +31,7 @@ const salarios = [{
 const id = 3;
 const getEmpleado = (id, callback) => {
 
-    const empleado = empleados.find((emp => emp.id === id))
+    const empleado = empleados.find((emp => emp.id === id))?.nombre
 
     if (empleado) {
         callback(null, empleado);

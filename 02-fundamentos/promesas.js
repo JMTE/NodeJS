@@ -58,7 +58,7 @@ const getSalario =(id, callback)=>{
 
         (salario)
         ?resolve(salario)
-        :reject("No existe el empleado")
+        :reject("No existe el salario para ese empleado")
     });
 }
 
@@ -85,3 +85,18 @@ getEmpleado(id)
 })
 
 .catch(error => console.log(error))
+
+
+// Ahora vamos a hacer lo mismo pero de una manera mucho mas simplificada pero sin corregir el error
+
+
+
+let nombre;
+getEmpleado(id)
+.then(empleado =>{
+
+    nombre=empleado;
+    return getSalario(id);
+})
+.then(salario => console.log("El empleado :" , nombre , "tiene un salario de ", salario))
+.catch(error => console.log(error) );
