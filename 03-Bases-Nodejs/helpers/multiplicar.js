@@ -3,13 +3,10 @@ const fs= require("fs");
 
 
 
-const crearArchivo =async(base=5)=>{
+const crearArchivo =async(base=5, listar=false )=>{
 
 try{
-    console.log("-----------------------------");
-console.log(`        TABLA DEL ${base}           `);
-console.log("-----------------------------");
-
+    
 
     let salida="";
 
@@ -18,8 +15,15 @@ console.log("-----------------------------");
         salida += `${base} x ${index} = ${element}\n`;
         
     }
-    
-    console.log(salida);
+    if (listar===true){
+        console.log("-----------------------------");
+console.log(`        TABLA DEL ${base}           `);
+console.log("-----------------------------");
+console.log(salida);
+
+
+    }
+   
     
     // fs.writeFile(`tablal-${base}.txt`, salida, (err)=>{
     

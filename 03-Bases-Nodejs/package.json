@@ -2,7 +2,7 @@
   "name": "03-bases-nodejs",
   "version": "0.0.1",
   "description": "Es una prueba de tabla de multiplicar con archivo de texto",
-  "main": "app2.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "base3": "node app --base=3"
