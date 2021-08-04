@@ -27,7 +27,7 @@ const {crearArchivo}= require("./helpers/multiplicar");
 // console.log(base);
 
 
- crearArchivo(argv.b, argv.l)
+ crearArchivo(argv.b,argv.h,argv.l)
 
  .then(nombreArchivo => console.log(nombreArchivo,"creado"))
  .catch(error=> console.log(error))

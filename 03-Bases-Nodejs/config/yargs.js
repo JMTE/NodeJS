@@ -12,7 +12,17 @@ describe:"Es la base de nuestra tabla de multiplicar"
 
 })
 
+.option("h", {
 
+    alias:"hasta",
+    type:"number",
+    demandOption:true,
+    describe:"Es el numero hasta el cual tiene que multiplicar"
+    
+    
+    
+    })
+    
 
 .option("l", {
 

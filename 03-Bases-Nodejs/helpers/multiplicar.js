@@ -5,23 +5,24 @@ var colors = require('colors');
 
 
 
-const crearArchivo =async(base=5, listar=false )=>{
+const crearArchivo =async(base=5, hasta=20, listar=false )=>{
 
 try{
     
 
-    let salida="";
+    let salida="" 
+    let consola="";
 
-    for (let index = 1; index < 11; index++) {
+    for (let index = 1; index < hasta+1; index++) {
         const element = index*base;
-        salida += `${base}`.green.bold + " x ".red.bold +`${index}`.green.bold + " = ".red.bold +`${element}\n`.green.bold;
-        
+        salida += `${base} x ${index} =  ${element}\n`;
+        consola += `${base}`.green.bold + " x ".red.bold +`${index}`.green.bold + " = ".red.bold +`${element}\n`.green.bold;
     }
     if (listar===true){
         console.log("-----------------------------".green.bold);
 console.log(`        TABLA DEL ${base}           `.red.bold);
 console.log("-----------------------------".green.bold);
-console.log(salida);
+console.log(consola);
 
 
     }
@@ -36,7 +37,7 @@ console.log(salida);
     
     fs.writeFileSync(`tabla-${base}.txt`, salida); //Si existe error hay que atraparlo con try y catch
     
-    return (`tabla.txt-${base}`.rainbow);
+    return (`tabla.txt-${base}`);
 
         
 
