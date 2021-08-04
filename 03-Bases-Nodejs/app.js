@@ -4,30 +4,31 @@
 
 const {crearArchivo}= require("./helpers/multiplicar");
 // const base=3;
-console.clear();
 
 
+const argv=require("yargs").argv;
 
 
-
+console.log("base: yargs ", argv.base);
+console.log(argv);
 
 //console.log(process.argv);
 
-const [ //Son los argumentos que forman el array al poner a funcionar la aplicacion normal node app,js
-    ,
-    ,
-    arg3="base=5"
-]=process.argv;
+// const [ //Son los argumentos que forman el array al poner a funcionar la aplicacion normal node app,js
+//     ,
+//     ,
+//     arg3="base=5"
+// ]=process.argv;
 
-const [, base=5]=arg3.split("=");
+// const [, base=5]=arg3.split("=");
 
-console.log(base);
+// console.log(base);
 
 
-crearArchivo(base)
+// crearArchivo(base)
 
-.then(nombreArchivo => console.log(nombreArchivo,"creado"))
-.catch(error=> console.log(error))
+// .then(nombreArchivo => console.log(nombreArchivo,"creado"))
+// .catch(error=> console.log(error))
 
 
 
