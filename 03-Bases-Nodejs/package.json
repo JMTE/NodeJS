@@ -10,6 +10,7 @@
   "author": "JMTE",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.4.0",
     "yargs": "^16.2.0"
   }
 }

@@ -19,8 +19,8 @@ describe:"Es la base de nuestra tabla de multiplicar"
     alias:"listar",
     type: "boolean",
     default:false,
-    describe:" Muestra los datos de la tabla en consola"
-})
+    describe:"Muestra los datos de la tabla en consola"
+})      
 .check( (argv, options) => {
 
     if (isNaN(argv.b)){
