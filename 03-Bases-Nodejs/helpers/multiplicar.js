@@ -35,9 +35,9 @@ console.log(consola);
     //     console.log("Archivo creado");
     // })
     
-    fs.writeFileSync(`tabla-${base}.txt`, salida); //Si existe error hay que atraparlo con try y catch
+    fs.writeFileSync(`./salida/tabla-${base}.txt`, salida); //Si existe error hay que atraparlo con try y catch
     
-    return (`tabla.txt-${base}`);
+    return `tabla-${base}.txt`;
 
         
 
