@@ -1,5 +1,6 @@
 
 require("colors");
+const { inquirerMenu } = require("./salida/inquirer");
 const { mostrarMenu, repiteMenu } = require("./salida/mensajes");
 
 
@@ -14,7 +15,7 @@ const main =async()=>{
 
     do{
 
-        opt =await mostrarMenu();
+        opt =await inquirerMenu();
 
         console.log({opt});
 
