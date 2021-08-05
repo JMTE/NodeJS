@@ -1,4 +1,8 @@
-require ("colors");
+
+require("colors");
+const { mostrarMenu, repiteMenu } = require("./salida/mensajes");
+
+
 
 
 
@@ -6,8 +10,11 @@ const main =async()=>{
 
     console.clear();
 
-    console.log("Hola mundo");
+  
 
+    mostrarMenu();
+
+    // repiteMenu();
 
 
 
