@@ -1,7 +1,7 @@
 
 require("colors");
-const { inquirerMenu } = require("./salida/inquirer");
-const { mostrarMenu, repiteMenu } = require("./salida/mensajes");
+const { inquirerMenu, repetirMenu } = require("./salida/inquirer");
+
 
 
 
@@ -19,13 +19,13 @@ const main =async()=>{
 
         console.log({opt});
 
-        if (opt!=="7"){
-            await repiteMenu();
-        } 
+      
+            await repetirMenu();
+        
        
 
 
-    } while(opt !=="7");
+    } while(opt !=='7');
 
    
 

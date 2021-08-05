@@ -10,8 +10,48 @@ const menuOpciones=[
     {
         type: "list",
         name:"opcion",
-        message:"¿Que desea hacer",
-        choices: ["opt1","opt2","opt3"]
+        message:"¿Que desea hacer?",
+        choices: [
+            {
+                value:"1",
+                name:"Crear nueva tarea"
+
+            },
+            {
+                value:"2",
+                name:"Ver listado de las tareas"
+
+            },
+            {
+                value:"3",
+                name:"Ver el listado de las tareas completadas"
+
+            },
+            {
+                value:"4",
+                name:"Ver el listado de las tareas pendientes"
+
+            },
+            {
+                value:"5",
+                name:"Marcar tarea como completada"
+
+            },
+            {
+                value:"6",
+                name:"Borrar una tarea"
+
+            },
+            {
+                value:"7",
+                name:"Salir"
+
+            }
+            
+            
+            
+            
+            ]
 
 
 
@@ -32,13 +72,30 @@ const inquirerMenu= async()=>{
         console.log("      Seleccione la opción         ".red.italic);
         console.log("###################################\n".green.bold);
     
-        const opt = await inquirer.prompt(menuOpciones);
+        const {opcion}= await inquirer.prompt(menuOpciones);
 
-        return opt;
+        return opcion;
     
+}
+
+const repetirMenu = async()=>{
+
+
+
+    const frasePausa=[
+        {
+            type:"input",
+            name:"pausa",
+            message: `\nPresione ${"ENTER".green} para continuar\n`
+        }
+    ]
+    console.log("\n");
+   const {pausa}= await inquirer.prompt(frasePausa);
+    return pausa;
 }
 
 module.exports=  {
 
-    inquirerMenu
+    inquirerMenu,
+    repetirMenu
 }
