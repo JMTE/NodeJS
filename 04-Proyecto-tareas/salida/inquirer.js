@@ -14,37 +14,36 @@ const menuOpciones=[
         choices: [
             {
                 value:"1",
-                name:"1. Crear nueva tarea"
+                name:"1.".red.bold +" Crear nueva tarea"
 
             },
             {
                 value:"2",
-                name:"2. Ver listado de las tareas"
+                name:"2.".red.bold +" Ver listado de las tareas"
 
             },
             {
                 value:"3",
-                name:"3. Ver el listado de las tareas completadas"
-
+                name:"3.".red.bold +" Ver el listado de las tareas completadas"
             },
             {
                 value:"4",
-                name:"4. Ver el listado de las tareas pendientes"
+                name:"4.".red.bold +" Ver el listado de las tareas pendientes"
 
             },
             {
                 value:"5",
-                name:"5. Marcar tarea como completada"
+                name:"5.".red.bold +" Marcar tarea como completada"
 
             },
             {
                 value:"6",
-                name:"6. Borrar una tarea"
+                name:"6.".red.bold +" Borrar una tarea"
 
             },
             {
                 value:"7",
-                name:"7. Salir"
+                name:"7.".red.bold +" Salir"
 
             }
             
