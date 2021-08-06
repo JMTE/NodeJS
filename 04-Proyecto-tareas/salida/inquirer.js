@@ -90,12 +90,38 @@ const repetirMenu = async()=>{
         }
     ]
     console.log("\n");
+    
    const {pausa}= await inquirer.prompt(frasePausa);
     return pausa;
+}
+
+
+const leerInput =async(mensaje)=>{
+
+    const objeto =[
+        {
+            type:"input",
+            name:"descripcion",
+            message:mensaje,
+            validate(value){
+
+                if (value.length===0){
+                    return "Por favor ingrese una tarea a realizar"
+                }
+                return true;
+            }
+        }
+
+    ];
+
+    const {descripcion}= await inquirer.prompt(objeto);
+
+    return descripcion;
 }
 
 module.exports=  {
 
     inquirerMenu,
-    repetirMenu
+    repetirMenu,
+    leerInput
 }

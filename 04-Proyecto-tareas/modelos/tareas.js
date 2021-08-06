@@ -9,7 +9,21 @@ class Tareas{
     constructor(){
 
         this._listado={};
-        
+
+    }
+
+
+    crearTarea(desc=""){
+
+
+        const tarea=new Tarea(desc);
+
+        this._listado[tarea.id] = tarea;
+        //Entre corchetes para llamar a propiedades del objeto creado, si hubieramos hecho un arreglo en vez de un objeto solamente haria falta el push
+
+
+
+
     }
 
 
