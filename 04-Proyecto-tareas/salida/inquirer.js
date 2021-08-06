@@ -14,37 +14,37 @@ const menuOpciones=[
         choices: [
             {
                 value:"1",
-                name:"Crear nueva tarea"
+                name:"1. Crear nueva tarea"
 
             },
             {
                 value:"2",
-                name:"Ver listado de las tareas"
+                name:"2. Ver listado de las tareas"
 
             },
             {
                 value:"3",
-                name:"Ver el listado de las tareas completadas"
+                name:"3. Ver el listado de las tareas completadas"
 
             },
             {
                 value:"4",
-                name:"Ver el listado de las tareas pendientes"
+                name:"4. Ver el listado de las tareas pendientes"
 
             },
             {
                 value:"5",
-                name:"Marcar tarea como completada"
+                name:"5. Marcar tarea como completada"
 
             },
             {
                 value:"6",
-                name:"Borrar una tarea"
+                name:"6. Borrar una tarea"
 
             },
             {
                 value:"7",
-                name:"Salir"
+                name:"7. Salir"
 
             }
             
