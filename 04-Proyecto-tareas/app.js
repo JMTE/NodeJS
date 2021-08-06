@@ -2,7 +2,7 @@
 require("colors");
 
 const Tareas = require("./modelos/tareas");
-const { guardarDB } = require("./salida/guardarArchivo");
+const { guardarDB, leerDB } = require("./salida/guardarArchivo");
 const { inquirerMenu, repetirMenu, leerInput } = require("./salida/inquirer");
 
 
@@ -18,6 +18,8 @@ const main =async()=>{
 
     const tareas=new Tareas();
 
+    
+  
 
     do{
         //Imprimir el menu
@@ -31,11 +33,20 @@ const main =async()=>{
 
                 const desc=await leerInput("Dame la tarea a realizar:");
                 tareas.crearTarea(desc);
+                guardarDB(tareas.listadoArray);
             break;
         
         case "2":
+            const tareasDB=leerDB();
 
-        console.log(tareas.listadoArray);
+            if (tareasDB){
+        
+                //Establecer las tareas
+        
+            }
+        
+        
+        
                 break;
         case "3":
             break;
@@ -57,7 +68,7 @@ const main =async()=>{
        }
 
 
-       guardarDB(tareas.listadoArray);
+       
         // const tarea=new Tarea("Aprender Angular");
         // const tareas=new Tareas();
 
