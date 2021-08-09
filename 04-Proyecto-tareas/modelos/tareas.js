@@ -28,6 +28,14 @@ class Tareas{
     }
 
 
+    cargarTareasFromArray(tareas=[]){
+
+        tareas.forEach(tarea=>{
+
+            this._listado[tarea.id]=tarea;
+        })
+    }
+
     crearTarea(desc=""){
 
 
@@ -41,8 +49,21 @@ class Tareas{
 
     }
 
+    listadoCompleto(){
+
+        //Listar la lista de tareas sin id , solo con descripcion o completada o no
+
+        this.listadoArray.forEach((tarea,index)=>{
+
+            const idx= index=1;
+            console.log(idx);
+
+        })
+    }
+
 
 
 }
 
-module.exports=Tareas;
+module.exports=Tareas
+
