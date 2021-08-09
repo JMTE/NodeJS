@@ -36,7 +36,7 @@ const main =async()=>{
 
         //Crear opcion
 
-                const desc=await leerInput("Dame la tarea a realizar:");
+                const desc=await leerInput("Dame la tarea a realizar: \n");
                 tareas.crearTarea(desc);
            
                 
@@ -47,10 +47,8 @@ const main =async()=>{
         
        
 
-            console.log(tareas.listadoArray);
             
-        
-            
+            tareas.listadoCompleto();
         
         
                 break;

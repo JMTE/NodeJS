@@ -55,12 +55,20 @@ class Tareas{
 
         this.listadoArray.forEach((tarea,index)=>{
 
-            const idx= index=1;
-            console.log(idx);
+            const idx= `${index+1}`.green;
+            const {descripcion, completadoEn}=tarea;
+
+            const estado=(completadoEn)? "Completada".green : "Pendiente".red
+
+            console.log(`${idx} ${descripcion} :: ${estado}`);
+
+
 
         })
     }
 
+
+    
 
 
 }
