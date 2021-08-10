@@ -52,9 +52,11 @@ const main =async()=>{
         
         
                 break;
-        case '3':
+        case '3': //Listar completadas
+            tareas.listarPendientesCompletadas(true);
             break;
-        case '4':
+        case '4': //Listar pendientes
+            tareas.listarPendientesCompletadas(false);
              break;
         case '5':
             break;
