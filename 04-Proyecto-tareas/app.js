@@ -3,7 +3,7 @@ require("colors");
 
 const Tareas = require("./modelos/tareas");
 const { guardarDB, leerDB } = require("./salida/guardarArchivo");
-const { inquirerMenu, repetirMenu, leerInput } = require("./salida/inquirer");
+const { inquirerMenu, repetirMenu, leerInput, listadoTareasBorrar } = require("./salida/inquirer");
 
 
 
@@ -61,6 +61,9 @@ const main =async()=>{
         case '5':
             break;
         case '6':
+
+                const id= await listadoTareasBorrar(tareas.listadoArray);
+                console.log({id});
             break;
         case '7':
             break;
