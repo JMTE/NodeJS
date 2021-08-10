@@ -62,8 +62,7 @@ const main =async()=>{
 
             const ids= await mostrarListadoCheckList(tareas.listadoArray);
 
-            console.log({ids});
-
+            tareas.cambiarCompletadas(ids);
             
             break;
         case '6':

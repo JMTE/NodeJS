@@ -183,7 +183,7 @@ const mostrarListadoCheckList = async(tareas =[])=>{
 
     const choices=tareas.map((tarea,i)=>{
 
-        const idx=`${i+1}`.green;
+        const idx=`${i+1}.`.green;
         return {
 
             value:tarea.id,
